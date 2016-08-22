@@ -18,7 +18,7 @@ jQuery(document).ready(function()
 		{
 			$hero.removeClass('attack').addClass('idle');
 			$laser.removeClass('laser');
-		}, 3000);
+		}, 2000);
 	};
 	
 	setInterval(scan, 5000);
