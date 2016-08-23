@@ -1,4 +1,4 @@
-/*начало*/
+*начало*/
 /*герой*/
 #hero.idle .herofront  -
     #hero.idle .cloakfront -

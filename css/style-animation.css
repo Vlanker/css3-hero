@@ -1,18 +1,13 @@
 
 @keyframes hero-levitate-amimation {
-	0% {
-        top: 80px;
+	50% {
+        top: 30px;
     }
-    50% {
-        top: 70px;
-    }
-    100% {
-        top: 80px;
-    }
+   
 
 }
 
-@keyframes hero-attack-levitate {
+@keyframes hero-attack-levitate-amimation {
     0% {
         left: -20px;
         top: 80px;
@@ -27,7 +22,22 @@
     }
 }
 
-@keyframes hero-cloak-levitate {
+@keyframes hero-back-levitate-amimation {
+    0% {
+        left: -20px;
+        top: 80px;
+    }
+    50%{
+        left: 85px;
+        top: 23px;
+    }
+    100% {
+        left: 85px;
+        top: 23px;
+    }
+}
+
+@keyframes hero-cloak-levitate-amimation {
     0% {
         transform: scaleY(0.9);
     }
@@ -39,7 +49,25 @@
     }
 }
 
-@keyframes hero-attack-cloak-levitate {
+@keyframes hero-attack-cloak-levitate-amimation {
+    0%{
+        left: -5px;
+        top: 200px;
+        transform: scaleY(0.9);
+    }
+    50%{
+        left: 100px;
+        top: 143px;
+        transform: scaleY(1.05) scaleX(0.95);
+   }
+    
+    100% {
+        left: 100px;
+        top: 143px;
+        transform: scaleY(0.9);
+    }
+}
+@keyframes hero-back-cloak-levitate-amimation {
     0%{
         left: -5px;
         top: 200px;
@@ -58,7 +86,7 @@
     }
 }
 
-@keyframes shadow {
+@keyframes shadow-amimation {
     0% {
         width: 250px;
     }
@@ -71,7 +99,7 @@
     }
 }
 
-@keyframes shadowright {
+@keyframes shadowright-amimation {
     0% {
         transform: scaleY(1) scaleX(1);
     }
@@ -85,16 +113,33 @@
     }
 }
 
-@keyframes laser {
-    from {
-        width: 138px;
+@keyframes shadowright-back-amimation {
+    0% {
+        transform: scaleY(1) scaleX(1);
     }
-    to {
-        width: 660px;
+    50% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+    100% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
     }
 }
 
-@keyframes burnover-shake-frames {
+@keyframes laser-amimation {
+     0% {
+        width: 138px;
+    }
+    50% {
+        width: 460px;
+    }
+    100% {
+        width: 660px;
+    }
+ }
+
+@keyframes burnover-shake-amimation {
     0%{
         transform: translateX(-20px);
     }
@@ -115,26 +160,26 @@
     }
 }
 /*clip: rect(Y1, X1, Y2, X2*/
-@keyframes movebaner {
+@keyframes movebaner-amimation {
     0% {
         clip: rect(0, 536px, 100px , 0);
     }
     50% {
-        clip: rect(0, 0,  218px, 0 );
+        clip: rect(0, 268px,  218px, 0 );
     }
     100% {
         clip: rect(0, 0,  100px, 0);
     }
 }
 
-@keyframes moveburn {
+@keyframes moveburn-amimation {
     0% {
-        clip: rect(0, 536px, 100px , 0);
+        clip: rect(0, 536px, 100px, 536px);
     }
     50% {
-        clip: rect(536px, 0,  0, 218px );
+        clip: rect(0, 536px, 218px, 268px);
     }
     100% {
-        clip: rect(536px, 0,  0, 100px);
+        clip: rect(0, 536px,  100px, 0);
     }
 }
