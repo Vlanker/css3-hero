@@ -10,14 +10,38 @@ body {
 	top: 20px; 
 }
 
+/*hero*/
 #hero .herofront{
-	background-image: url(/img/herofront.png);
+	visibility: hidden;
+	background-image: url(../img/herofront.png);
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 3;
+}
+
+#hero .heroupright{
+	visibility: hidden;
+	background-image: url(../img/heroright.png);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+}
+
+/*
+#hero .herodown{
+	visibility: hidden;
+	background-image: url(../img/heroright.png);
+	
+}*/
+
+#hero.idle .herofront {
+	visibility: visible;
 	animation-name: hero-levitate-amimation;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
@@ -25,49 +49,95 @@ body {
 	animation-timing-function: ease-in-out;
 }
 
-#hero .heroright{
-	background-image: url(/img/heroright.png);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 3;
+#hero.attack .heroupright {
+	visibility: visible;
 	animation-name: hero-attack-levitate;
 	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-direction: initial;;
-	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.26,1.13,.72,1.17);
+	animation-fill-mode: forwards;
 }
 
+#hero.back .heroupright{
+	visibility: visible;
+	animation-name: hero-attack-levitate;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	animation-timing-function: cubic-bezier(0,1.1,.81,.29);
+	animation-fill-mode: forwards;
+}
 
-#hero.idle .herofront {
-	visibility: visible;
-}
-#hero.attack .heroright {
-	visibility: visible;
-}
+/*end hero*/
+
 /*cloak*/
-#hero .cloakfront {
-	background-image: url(/img/cloak.png);
+
+#hero .cloak {
+	visibility: hidden;
+	background-image: url(../img/cloak.png);
 	position: absolute;
-	width: 161px;
-	height: 142px;
+	width: 100%;
+	height: 100%;
 	background-repeat: no-repeat;
-	top: 200px;
-	left: 53px;
-	z-index: 1;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+#hero .cloak {
+	visibility: hidden;
+	background-image: url(../img/cloak.png);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	left: 0;
+	top: 0;
+	z-index: 2;
+
+}
+
+#hero.idle .cloak {
+	visibility: visible;
 	animation-name: hero-cloak-levitate;
 	animation-duration: 2s;
-	animation-timing-function: linear;
 	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
 }
+
+#hero.attack .cloak {
+	visibility: visible;
+	animation-name: hero-attack-cloak-levitate;
+	animation-duration: 2s;
+	animation-iteration-count: 1;;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.26,1.13,.72,1.17);
+	animation-fill-mode: forwards;
+}
+
+#hero.back .cloak {
+	visibility: visible;
+	animation-name: hero-attack-cloak-levitate;
+	animation-duration: 2s;
+	animation-iteration-count: 1;;
+	animation-direction: reverse;
+	animation-timing-function: cubic-bezier(0,1.1,.81,.29);
+	animation-fill-mode: forwards;
+}
+
+/*
+#hero.back .herodown {
+	visibility: visible;
+}
+*/
 /*end cloak*/
 
 /*shadow*/
-
-#hero.idle .shadow {
-	background-image: url(/img/shadow.png);
+#hero .shadow {
+	visibility: hidden;
+	background-image: url(../img/shadow.png);
     width: 250px;
 	height: 84px;
 	background-repeat: no-repeat; 
@@ -76,78 +146,135 @@ body {
 	left: 0;
 	top: 430px;
 	z-index: 1;
+}
+
+#hero.idle .shadow {
+	visibility: visible;
 	animation-name: shadow;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: ease-in-out;
+
 }
 
 #hero.attack .shadow {
-	animation-name: none;
-	width: 210px;
-	left: 12.5px;
+	visibility: visible;
+	animation-name: shadowright;
+	animation-duration: 2s;
+	animation-iteration-count: 1;;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.26,1.13,.72,1.17);
+	animation-fill-mode: forwards;
 }
 
+#hero.back .shadow {
+	visibility: visible;
+	animation-name: shadowright;
+	animation-duration: 2s;
+	animation-iteration-count: 1;;
+	animation-direction: reverse;
+	animation-timing-function: cubic-bezier(0,1.1,.81,.29);
+	animation-fill-mode: forwards;
+}
 
 /*end shadow*/
-
-
-
 
 .container {
 	width: 740px;
 	height: 358px;
 	position: absolute;
-	left: 359px;
+	left: 459px;
 	top: 20px; 
+	
 }
 
-.title .baner{
-	background-image: url(/img/clean.png);
+/*baner*/
+ .baner {
+	opacity: 0;/*0 1*/
+	clip: rect(0, 536px, 100px, 0);
+	z-index: 2;
+	background-image: url(../img/clean.png);
     width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 100px;
+	left: 0;
 	top: 0;
 }
 
-.title .baner-attack{
-	background-image: url(/img/no-clean.png);
+.baner.baner-shake {
+	animation-name: burnover-shake-frames;
+    animation-duration: 0.2s;	
+    animation-timing-function: linear;	
+    animation-iteration-count: 1;
+}
+
+.banerburn{
+	opacity: 1;/*0 1*/
+	clip: rect(0, 536px, 100px, 0);
+	z-index: 1;
+	background-image: url(../img/no-clean.png);
     width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 100px;
+	left: 0;
 	top: 0;
 }
 
+.baner.over {
+    animation-name: movebaner;
+    animation-duration: 2s;	
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
 
-#hero .laser-attack {
-	background-image: url(/img/laser.png);
-	width: 50%;
+.banerburn.burn {
+	animation-name: moveburn;
+    animation-duration: 2s;	
+    animation-iteration-count: 1;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;	
+}
+
+/*end baner*/
+
+/*laser*/
+
+.laser {
+	visibility: hidden;
+	background-image: url(../img/laser.png);
+	width: 180px;
 	height: 50px;
 	position: absolute;
-	left: 225px;
-	top: 50px; 
-	z-index: 4;
+	left: 220px;
+	top: 50px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	animation-name: laser;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	z-index: 4;
 }
 
-#hero .laser-attack::after {
+.laser::after{
 	content: " ";
 	width: 4px;
 	height: 100%;
 	right: 0;
-	top: 1px;
+	top: 0;
 	background-color: #ffe500;
 	position: absolute;
 	border-radius: 3px;
 	box-shadow: 0 0 10px 3px #ffe500; 
 }
+
+#hero.attack .laser.attack{	
+	visibility: visible;
+	animation-name: laser;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+}
+
+/*end laser*/

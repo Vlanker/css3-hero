@@ -1,5 +1,6 @@
+
 @keyframes hero-levitate-amimation {
-	0%{
+	0% {
         top: 80px;
     }
     50% {
@@ -10,8 +11,9 @@
     }
 
 }
+
 @keyframes hero-attack-levitate {
-    0%{
+    0% {
         left: -20px;
         top: 80px;
     }
@@ -19,37 +21,14 @@
         left: 85px;
         top: 23px;
     }
-    
     100% {
         left: 85px;
         top: 23px;
     }
 }
 
-@keyframes laser {
-    from{
-        width: 138px;
-    }
-    to {
-        width: 660px;
-    }
-}
-
-@keyframes shadow {
-   0%{
-        width: 250px;
-    }
-   50% {
-        width: 225px;
-        left: 12.5px;
-    }
-    100% {
-        width: 250px;
-    }
-}
-
 @keyframes hero-cloak-levitate {
-    0%{
+    0% {
         transform: scaleY(0.9);
     }
     50% {
@@ -60,4 +39,102 @@
     }
 }
 
+@keyframes hero-attack-cloak-levitate {
+    0%{
+        left: -5px;
+        top: 200px;
+        transform: scaleY(0.9);
+    }
+    50%{
+        left: 100px;
+        top: 143px;
+        transform: scaleY(1.05) scaleX(0.95);
+   }
+    
+    100% {
+        left: 100px;
+        top: 143px;
+        transform: scaleY(0.9);
+    }
+}
 
+@keyframes shadow {
+    0% {
+        width: 250px;
+    }
+    50% {
+        width: 225px;
+        left: 12.5px;
+    }
+    100% {
+        width: 250px;
+    }
+}
+
+@keyframes shadowright {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+    100% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+}
+
+@keyframes laser {
+    from {
+        width: 138px;
+    }
+    to {
+        width: 660px;
+    }
+}
+
+@keyframes burnover-shake-frames {
+    0%{
+        transform: translateX(-20px);
+    }
+    20%{
+        transform: translateX(20px);
+    }
+    40%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translateX(10px);
+    }
+    80%{
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+/*clip: rect(Y1, X1, Y2, X2*/
+@keyframes movebaner {
+    0% {
+        clip: rect(0, 536px, 100px , 0);
+    }
+    50% {
+        clip: rect(0, 0,  218px, 0 );
+    }
+    100% {
+        clip: rect(0, 0,  100px, 0);
+    }
+}
+
+@keyframes moveburn {
+    0% {
+        clip: rect(0, 536px, 100px , 0);
+    }
+    50% {
+        clip: rect(536px, 0,  0, 218px );
+    }
+    100% {
+        clip: rect(536px, 0,  0, 100px);
+    }
+}

@@ -1,0 +1,26 @@
+/*начало*/
+/*герой*/
+#hero.idle .herofront  -
+    #hero.idle .cloakfront -
+    #hero.idle .shadow -
+    /*банер*/
+     .baner
+     .baner-shake
+    .attack .baner
+/*конец начала*/
+
+ /*шаг 1*/
+/*герой взлетает*/
+    #hero.attack .heroupright -
+    #hero.attack .cloak -
+    #hero.attack .shadow
+/*лазер*/
+    #hero.attack .laser
+/*банер*/
+    .attack .baner-animation
+    .idle .baner
+/*герой возвращается*/
+    #hero.back .heroupright -
+    #hero.back .cloak -
+    #hero.back .shadow
+#hero.idle .herofront 
