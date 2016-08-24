@@ -1,0 +1,185 @@
+
+@keyframes hero-levitate-amimation {
+	50% {
+        top: 30px;
+    }
+   
+
+}
+
+@keyframes hero-attack-levitate-amimation {
+    0% {
+        left: -20px;
+        top: 80px;
+    }
+    50%{
+        left: 85px;
+        top: 23px;
+    }
+    100% {
+        left: 85px;
+        top: 23px;
+    }
+}
+
+@keyframes hero-back-levitate-amimation {
+    0% {
+        left: -20px;
+        top: 80px;
+    }
+    50%{
+        left: 85px;
+        top: 23px;
+    }
+    100% {
+        left: 85px;
+        top: 23px;
+    }
+}
+
+@keyframes hero-cloak-levitate-amimation {
+    0% {
+        transform: scaleY(0.9);
+    }
+    50% {
+        transform: scaleY(1) scaleX(0.97);
+    }
+    100% {
+        transform: scaleY(0.9);
+    }
+}
+
+@keyframes hero-attack-cloak-levitate-amimation {
+    0%{
+        left: -5px;
+        top: 200px;
+        transform: scaleY(0.9);
+    }
+    50%{
+        left: 100px;
+        top: 143px;
+        transform: scaleY(1.05) scaleX(0.95);
+   }
+    
+    100% {
+        left: 100px;
+        top: 143px;
+        transform: scaleY(0.9);
+    }
+}
+@keyframes hero-back-cloak-levitate-amimation {
+    0%{
+        left: -5px;
+        top: 200px;
+        transform: scaleY(0.9);
+    }
+    50%{
+        left: 100px;
+        top: 143px;
+        transform: scaleY(1.05) scaleX(0.95);
+   }
+    
+    100% {
+        left: 100px;
+        top: 143px;
+        transform: scaleY(0.9);
+    }
+}
+
+@keyframes shadow-amimation {
+    0% {
+        width: 250px;
+    }
+    50% {
+        width: 225px;
+        left: 12.5px;
+    }
+    100% {
+        width: 250px;
+    }
+}
+
+@keyframes shadowright-amimation {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+    100% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+}
+
+@keyframes shadowright-back-amimation {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+    100% {
+        left: 100px;
+        transform: scaleY(0.5) scaleX(0.5);
+    }
+}
+
+@keyframes laser-amimation {
+     0% {
+        width: 138px;
+    }
+    50% {
+        width: 460px;
+    }
+    100% {
+        width: 660px;
+    }
+ }
+
+@keyframes burnover-shake-amimation {
+    0%{
+        transform: translateX(-20px);
+    }
+    20%{
+        transform: translateX(20px);
+    }
+    40%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translateX(10px);
+    }
+    80%{
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+/*clip: rect(Y1, X1, Y2, X2*/
+@keyframes movebaner-amimation {
+    0% {
+        clip: rect(0, 536px, 100px , 0);
+    }
+    50% {
+        clip: rect(0, 268px,  218px, 0 );
+    }
+    100% {
+        clip: rect(0, 0,  100px, 0);
+    }
+}
+
+@keyframes moveburn-amimation {
+    0% {
+        clip: rect(0, 536px, 100px, 536px);
+    }
+    50% {
+        clip: rect(0, 536px, 218px, 268px);
+    }
+    100% {
+        clip: rect(0, 536px,  100px, 0);
+    }
+}
